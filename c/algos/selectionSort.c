@@ -29,7 +29,7 @@ void selectionSort(int array[], int numOfElem)
     for (index = 0; index < numOfElem; index++)
     {
         int smallestElemIndex = index;
-        for(innerLoopIndex = index; innerLoopIndex < numOfElem; innerLoopIndex++)
+        for(innerLoopIndex = index + 1; innerLoopIndex < numOfElem; innerLoopIndex++)
         {
             if (array[smallestElemIndex] > array[innerLoopIndex])
             {

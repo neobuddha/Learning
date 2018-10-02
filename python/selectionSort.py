@@ -11,18 +11,18 @@ def selectionSort(array):
     for index in range(length):
         innerLoopIndex = index
         minimumValueIndex = index
-        for innerLoopIndex in range (index, length):
+        for innerLoopIndex in range (index + 1, length):
             if array[minimumValueIndex] > array[innerLoopIndex]:
                 minimumValueIndex = innerLoopIndex
         
         array[index], array[minimumValueIndex] = array[minimumValueIndex], array[index]
 
 def main():
-    array = [5,4,2,3,1]
+    array = [75,14,2,33,1]
 
     print("Unsorted Array:", array)
     selectionSort(array)
-    print("Unsorted Array:", array)
+    print("Sorted Array:", array)
 
 if __name__=="__main__":
     main()

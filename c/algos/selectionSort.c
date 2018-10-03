@@ -23,7 +23,6 @@ void selectionSort(int array[], int numOfElem)
 {
     int index = 0;
     int innerLoopIndex = 0;
-    int smallestElem = 0;
     int smallestArrayIndex = 0;
 
     for (index = 0; index < numOfElem; index++)

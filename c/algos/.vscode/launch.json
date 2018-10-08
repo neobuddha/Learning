@@ -8,10 +8,22 @@
             "name": "(lldb) Attach",
             "type": "cppdbg",
             "request": "attach",
-            "program": "${workspaceFolder}/a.out",
+            "program": "/Users/prabhat/github/ctci/a.out",
             "processId": "${command:pickProcess}",
             "MIMode": "lldb"
         },
+        {
+            "name": "(lldb) Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/Users/prabhat/github/ctci/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
         {
             "name": "(lldb) Launch",
             "type": "cppdbg",

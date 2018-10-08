@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "command": "clang",
     "isShellCommand": true,
-    "args": ["selectionSort.c", "-g"],
+    "args": ["/Users/prabhat/github/ctci/stringPrograms.c", "-g"],
     "showOutput": "always",
     "problemMatchers": [
         "$gcc"
@@ -28,7 +28,7 @@
     "version": "2.0.0",
     "command": "clang",
     "isShellCommand": true,
-    "args": ["mergesort.c", "-g"],
+    "args": ["stringPrograms.c", "-g"],
     "showOutput": "always",
     "problemMatchers": [
         "$gcc"

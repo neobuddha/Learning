@@ -16,11 +16,12 @@ class learnDictionary:
         if key in self.hashTable:
             return self.hashTable[key]
         else:
-            print "Key: ", key, "Not Found"
+            print ("Key: ", key, "Not found")
+            
     
 
 def main():
-    print "Learning Hashtable/Dictionary in Python"
+    print ("Learning Hashtable/Dictionary in Python")
 
     obj = learnDictionary()
 
@@ -34,8 +35,8 @@ def main():
     obj.addKey('Pears', 8)
     obj.addKey('Melon', 9)
 
-    print "Mango" , obj.getValue('Mango')
-    print "Plum" , obj.getValue('Plum')
+    print ("Mango" , obj.getValue('Mango'))
+    print ("Plum" , obj.getValue('Plum'))
 
     obj.getValue('Carrot')
 

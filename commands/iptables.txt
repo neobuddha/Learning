@@ -16,3 +16,7 @@
    20  sudo iptables -L -n -v --line-numbers
    21  sudo iptables -L | grep policy
    22  sudo iptables -L
+
+# NAT rule to redirect Ping traffic from 192.168.1.17 to 192.168.1.18
+sudo iptables -t nat -A PREROUTING -p icmp -s 192.168.1.19 -j DNAT --to-destination 192.168.1.18
+echo 1 > /proc/sys/net/ipv4/ip_forward

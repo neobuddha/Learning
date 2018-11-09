@@ -1,0 +1,18 @@
+    5  sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+    6  sudo iptables -A OUTPUT -o lo -j ACCEPT
+    7  sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+    8  sudo iptables -A OUTPUT -m conntrack --ctstate ESTABLISHED -j ACCEPT
+    9  ifconfig -a
+   10  sudo iptables -A INPUT -m conntrack --ctstate INVALID -j DROP
+   11  sudo iptables -A INPUT -s 192.168.1.19 -j DROP
+   12  iptables -L -n -v --line-numbers
+   13  sudo iptables -L -n -v --line-numbers
+   14  iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+   15  sudo iptables -A INPUT -p icmp --icmp-type echo-request -j ACCEPT
+   16  sudo iptables -A OUTPUT -p icmp --icmp-type echo-reply -j ACCEPT
+   17  sudo iptables -L -n -v --line-numbers
+   18  sudo iptables -A INPUT -i eth0 -p tcp --dport 22 -m state --state NEW,ESTABLISHED -j ACCEPT
+   19  sudo iptables -A OUTPUT -o eth0 -p tcp --sport 22 -m state --state ESTABLISHED -j ACCEPT
+   20  sudo iptables -L -n -v --line-numbers
+   21  sudo iptables -L | grep policy
+   22  sudo iptables -L
